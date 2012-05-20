@@ -5,6 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+	url(r'^event$', 'eventdjango.views.eventform', name='eventform'),
     # Examples:
     # url(r'^$', 'eventdjango.views.home', name='home'),
     # url(r'^eventdjango/', include('eventdjango.foo.urls')),

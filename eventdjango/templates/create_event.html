@@ -37,8 +37,9 @@
     Create a new Event
   </header>
   <div role="main">
-    <form method="post" action="">
-      {{ CreateEventForm }}
+    <form method="post" action="">{% csrf_token %}
+      {{ fm.as_p }}
+      <input type="submit">
     </form>
   </div>
   <footer>

@@ -23,9 +23,11 @@ class Event(models.Model):
 #        abstract = False
 
 class Conference(Event):
+    pass
 
 
 class Hackathon(Event):
+    pass
 
 
 class Talk(Event):
