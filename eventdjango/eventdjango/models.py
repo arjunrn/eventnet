@@ -17,6 +17,10 @@ class Event(models.Model):
     logo = models.ImageField("Logo", upload_to='photos/events', blank=True)
     venue = models.CharField("Venue", max_length=255)
 
+# Commented because the event can be general which doesn't fit into any subclasses
+#    class Meta:
+#        abstract = False
+
 class Conference(Event):
 
 
@@ -28,7 +32,3 @@ class Talk(Event):
     sp_email = models.EmailField("Speaker Email", max_length=75)
     sp_phone = models.CharField("Speaker Phone", max_length=20, blank=True)
     photo = models.ImageField("Logo", upload_to='photos/events', blank=True)
-
-# Commented because the event can be general which doesn't fit into any subclasses
-#    class Meta:
-#        abstract = False
