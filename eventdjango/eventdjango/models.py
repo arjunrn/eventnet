@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 
 class Event(models.Model):
@@ -32,3 +33,7 @@ class Talk(Event):
     sp_email = models.EmailField("Speaker Email", max_length=75)
     sp_phone = models.CharField("Speaker Phone", max_length=20, blank=True)
     photo = models.ImageField("Logo", upload_to='photos/events', blank=True)
+
+class CreateEventForm(ModelForm):
+    class  Meta:
+        model = Event
